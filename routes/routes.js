@@ -6,7 +6,9 @@ export const router = express.Router();
 router.use(express.json()); // Middleware to parse incoming requests
 
 router
-    .get("/", (req, res) => { handleSearchAction(req, res) });
+  .get('/', (req, res) => { handleSearchAction(req, res); });
 
 router
-    .get("/:id", (req, res) => { handleItemSearchAction(req, res) });
+  .get('/:id', (req, res) => { handleItemSearchAction(req, res); });
+
+export default router;
